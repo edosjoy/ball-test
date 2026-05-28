@@ -1,1 +1,228 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta
+     name="viewport"
+     content="width=device-width, initial-scale=1.0"
+   >
+
+   <title>Default template</title>
+
+   <!-- for sammsung.com URLS -->
+   <!-- <base href="https://www.samsung.com/" target="_blank"> -->
+
+   <meta
+      name="keywords"
+      content="Default template"
+   />
+   <meta
+      name="description"
+      content="Default template"
+   />
+   <meta
+      name="date"
+      content="2023-07-10"
+   />
+   <meta
+      name="sitecode"
+      content="ru"
+   />
+
+   <script type="text/javascript">
+      var winhref = window.location.href.replace("/content/samsung","").replace(".html","/");
+
+      if (winhref.indexOf("?") > 0) {
+         winhref = winhref.substring(0, winhref.indexOf("?"));
+      }
+
+      var siteCode = winhref.split("/")[3];
+
+      //depth Info.
+      var depth = winhref.split("/").length;
+      var depth_last = winhref.split("/")[depth-1];
+
+      if (depth_last =="" || depth_last.charAt(0)=="?") {
+         depth -= 1;
+      }
+
+      //set pathIndicator(not product page)
+      var pageName = "";
+      var depth_2  = "";
+      var depth_3  = "";
+      var depth_4  = "";
+      var depth_5  = "";
+
+      var digitalData = {
+         "page" : {
+            "pageInfo" : {
+               "siteCode"      : "ru",
+               "pageName"      : pageName,
+               "pageID"        : "L2NvbnRlbnQvc2Ftc3VuZy9ydQ==",
+               "pageTrack"     : "home",
+               "originPlaform" : "web",
+            },
+            "pathIndicator" : {
+               "depth_2" : depth_2,
+               "depth_3" : depth_3,
+               "depth_4" : depth_4,
+               "depth_5" : depth_5,
+            }
+         },
+         "user": {
+            "userDeviceList": []
+         },
+         "product" : {
+            "category" : "",
+            "model_code" : "", // PD class정보 이용하여 설정
+            "model_name" : "", // PD page(server-side)
+            "displayName" : "", // PD class정보 이용하여 설정
+            "pvi_type_code" : "", //PD page(server-side)
+            "pvi_type_name" : "", //PD page(server-side)
+            "pvi_subtype_code" : "", //PD page(server-side)
+            "pvi_subtype_name" : "",//PD page(server-side)
+            "pd_type" : "", //PD type
+            "content_id" : "",
+            "products" : "",
+            "prodView" : ""
+         }
+      }
+   </script>
+
+   <!-- Reset -->
+   <style>
+      a, abbr, acronym, address,
+      applet, article, aside, audio,
+      b, big, blockquote, body, canvas,
+      caption, center, cite, code, dd,
+      del, details, dfn, div, dl, dt, em,
+      embed, fieldset, figcaption, figure,
+      footer, form, h1, h2, h3, h4, h5, h6,
+      header, hgroup, html, i, iframe, img,
+      ins, kbd, label, legend, li, mark, menu,
+      nav, object, ol, output, p, pre, q, ruby,
+      s, samp, section, small, span, strike,
+      strong, sub, summary, sup, table, tbody,
+      td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+         margin:0;
+         padding:0;
+         border:0;
+         font-size:100%;
+         font:inherit;
+         vertical-align:baseline;
+      }
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+         display:block;
+      }
+      body {
+         line-height: 1;
+      }
+      ol, ul {
+         list-style:none;
+      }
+      blockquote, q {
+         quotes:none;
+      }
+      blockquote:after, blockquote:before,
+      q:after, q:before {
+         content:'';
+         content:none;
+      }
+      table {
+         border-collapse:collapse;
+         border-spacing:0;
+      }
+   </style>
+
+   <!-- for Adobe Analityc (Omnibug) -->
+   <!-- <script src="https://assets.adobedtm.com/2f39014c5d5172df150d19eb00fe42ddba079437/satelliteLib-db2822c526e4500fa9b86a9e9ca775ba4d6db18e.js"></script> -->
+
+   <!-- default -->
+   <link
+      rel="stylesheet"
+      href="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-site/resources/global/css/fonts.css"
+      type="text/css"
+   />
+   <link
+      rel="stylesheet"
+      href="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-site/resources/ru/css/ru.css"
+      type="text/css"
+   />
+   <link
+      rel="stylesheet"
+      href="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-dependencies.min.css"
+      type="text/css"
+   />
+   <link
+      rel="stylesheet"
+      href="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-base-new-gnb.min.css"
+      type="text/css"
+   />
+   <link
+      rel="stylesheet"
+      href="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-templates/page-home/compact.min.css"
+      type="text/css"
+   />
+
+   <!-- local -->
+   <link
+      rel="stylesheet"
+      href="style.css"
+   >
+</head>
+<body>
+   <input
+      type="hidden"
+      name="siteCode"
+      id="siteCode"
+      value="ru"
+   />
+   <input
+      type="hidden"
+      name="store_sitecode"
+      id="store_sitecode"
+      value="ru"
+   />
+
+
+
+   <!-- START Page -->
+   <div class="ball-game">
+      <div class="description">
+         <div class="kicks-percents" style="font-weight: bold">x<span>0</span></div>
+         <div class="kicks">0</div>
+         <div class="your-cash-back" style="visibility: hidden">YOU GET MAX CASH BACK</div>
+      </div>
+
+      <div class="height-place-kicks"></div>
+
+      <div class="shadow"></div>
+
+      <div class="ball">
+         <img src="/ball.png" alt="Ball">
+      </div>
+
+   </div>
+   <!-- END Page -->
+
+
+
+   <!-- Template -->
+   <script
+      src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-dependencies.min.js"
+   ></script>
+   <script
+      src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-base-new-gnb.min.js"
+   ></script>
+   <script
+      src="https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-templates/page-home/compact.min.js"
+   ></script>
+
+   <!-- Local -->
+   <script src="/gsap/gsap.js"></script>
+   <script src="/gsap/gsapPhysics.js"></script>
+   <script src="/gsap/gsapTweenMax.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
